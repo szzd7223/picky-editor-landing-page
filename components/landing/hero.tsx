@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Terminal, Code2 } from "lucide-react";
+import { TerminalAnimation } from "./terminal-animation";
 
 export function Hero() {
     return (
@@ -40,32 +41,8 @@ export function Hero() {
 
                     <div className="relative">
                         <div className="border border-border bg-card p-1 shadow-2xl">
-                            <div className="relative aspect-video bg-[#050705] border border-border flex flex-col p-4 overflow-hidden">
-                                <div className="flex items-center justify-between border-b border-border/50 pb-2 mb-4">
-                                    <span className="text-[9px] font-bold uppercase text-primary/50 tracking-widest italic">{" >> "}system.terminal</span>
-                                    <div className="flex gap-1.5">
-                                        <div className="w-2 h-2 rounded-full bg-border" />
-                                        <div className="w-2 h-2 rounded-full bg-border" />
-                                        <div className="w-2 h-2 rounded-full bg-primary/40" />
-                                    </div>
-                                </div>
-                                <div className="flex-1 border border-dashed border-border/30 flex flex-col items-center justify-center space-y-4">
-                                    <div className="bg-background border border-border p-4 shadow-xl">
-                                        <div className="flex items-center gap-3">
-                                            <div className="h-8 w-8 bg-primary/20 flex items-center justify-center border border-primary/40">
-                                                <Code2 className="h-4 w-4 text-primary" />
-                                            </div>
-                                            <div className="space-y-1">
-                                                <div className="h-1.5 w-20 bg-primary/30" />
-                                                <div className="h-1.5 w-12 bg-border" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mt-4 flex gap-1">
-                                    <div className="h-1 w-full bg-border/20" />
-                                    <div className="h-1 w-8 bg-primary/50" />
-                                </div>
+                            <div className="relative aspect-video overflow-hidden">
+                                <TerminalAnimation />
                             </div>
                         </div>
                     </div>
