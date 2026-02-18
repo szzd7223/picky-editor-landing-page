@@ -17,9 +17,9 @@ export function TerminalAnimation() {
     const cursorVariants = {
         initial: { left: "40%", top: "70%" },
         toInspect: { left: "85%", top: "35%" },
-        toLeft: { left: "22%", top: "45%" },
-        toRight: { left: "54%", top: "45%" },
-        toInner: { left: "54%", top: "54%" },
+        toLeft: { left: "22%", top: "40%" },
+        toRight: { left: "48%", top: "40%" },
+        toInner: { left: "48%", top: "30%" },
     };
 
     const getCursorPos = () => {
@@ -168,7 +168,7 @@ export function TerminalAnimation() {
                                                 </div>
                                             </div>
                                             <div className="flex justify-between items-center text-[7px]">
-                                                <span className="text-white/80">Base_Color</span>
+                                                <span className="text-white/80">Border_Color</span>
                                                 <motion.div
                                                     animate={{
                                                         backgroundColor: step >= 8 ? "#EF4444" : "#2ECC71",
@@ -187,7 +187,7 @@ export function TerminalAnimation() {
                                         </div>
                                         <div className="p-3 bg-black/80 border border-white/10 text-white leading-relaxed break-all font-mono shadow-xl relative overflow-hidden">
                                             <code className="text-[7px]">
-                                                class="<span className={step >= 8 ? 'text-red-400 font-bold' : 'text-primary font-bold'}>
+                                                class="<span className="text-primary font-bold">
                                                     {step >= 7 ? "w-full" : "w-10"} h-7 border-2
                                                     {step >= 8 ? " border-red-500 bg-red-500/10" : " border-green-500 bg-green-500/10"}
                                                 </span>"
