@@ -39,9 +39,9 @@ export function Hero() {
                         </div>
                     </div>
 
-                    <div className="relative">
+                    <div className="relative max-w-[400px] mx-auto w-full lg:max-w-none">
                         <div className="border border-border bg-card p-1 shadow-2xl">
-                            <div className="relative aspect-video overflow-hidden">
+                            <div className="relative aspect-[4/3] overflow-hidden">
                                 <TerminalAnimation />
                             </div>
                         </div>
