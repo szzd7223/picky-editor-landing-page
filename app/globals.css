@@ -104,3 +104,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes fish-fly {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translate(-50%, -150%) scale(1.5) rotate(-20deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0px, -200px) scale(0) rotate(180deg);
+    opacity: 0;
+  }
+}
