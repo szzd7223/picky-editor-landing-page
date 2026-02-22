@@ -3,6 +3,7 @@
 import React from "react";
 import { DemoSite } from "./demo-site";
 import { ExtensionSidebar } from "./extension-sidebar";
+import { Monitor } from "lucide-react";
 
 export interface NodeInfo {
     tag: string;
@@ -117,7 +118,8 @@ export function Playground() {
                     </p>
                 </div>
 
-                <div className="relative h-[720px] w-full border border-border bg-background-offset/30 shadow-2xl rounded-2xl overflow-hidden flex backdrop-blur-sm group">
+                {/* Desktop View */}
+                <div className="hidden lg:flex relative h-[720px] w-full border border-border bg-background-offset/30 shadow-2xl rounded-2xl overflow-hidden backdrop-blur-sm group">
                     {/* Grid Background */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                         style={{
@@ -156,6 +158,26 @@ export function Playground() {
                             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                             Simulation_Active
                         </div>
+                    </div>
+                </div>
+
+                {/* Mobile View */}
+                <div className="flex lg:hidden relative h-[400px] w-full border border-border bg-background-offset/30 shadow-2xl rounded-2xl overflow-hidden flex-col items-center justify-center text-center p-8 backdrop-blur-sm space-y-4">
+                    {/* Grid Background */}
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                        style={{
+                            backgroundImage: 'linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)',
+                            backgroundSize: '40px 40px'
+                        }} />
+
+                    <div className="relative z-10 flex flex-col items-center space-y-4">
+                        <div className="w-16 h-16 rounded-full border border-border bg-card flex items-center justify-center mb-2 shadow-xl">
+                            <Monitor className="w-8 h-8 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-bold uppercase tracking-tight">Desktop Experience Required</h3>
+                        <p className="text-sm text-muted-foreground max-w-sm">
+                            The Live Lab is a complex environment optimized for larger screens. Please visit on a desktop to experience the full interactive demo.
+                        </p>
                     </div>
                 </div>
             </div>
