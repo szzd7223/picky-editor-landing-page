@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sparkles, AlertTriangle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 interface DemoSiteProps {
     inspectMode: boolean;
@@ -40,7 +40,7 @@ export function DemoSite({ inspectMode, selectedElement, onSelect, customStyles 
                         {...getInspectProps("h1.title")}
                         className={`text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] uppercase italic ${getInspectProps("h1.title").className}`}
                     >
-                        YOU CAN SELECT ANY <span className="text-primary not-italic">ELEMENT</span> ON THE PAGE
+                        SELECT ANY <span className="text-primary not-italic">ELEMENT</span> ON THE PAGE
                     </h1>
                     <div className="space-y-4 max-w-2xl mx-auto">
                         <p
@@ -92,28 +92,14 @@ export function DemoSite({ inspectMode, selectedElement, onSelect, customStyles 
                         {/* The Cat Box - Static */}
                         <div
                             {...getInspectProps("box.cat")}
-                            className={`aspect-square rounded-xl border-2 border-red-500/20 bg-red-500/5 flex flex-col items-center justify-center gap-2 relative overflow-hidden ${getInspectProps("box.cat").className}`}
+                            className={`aspect-square rounded-xl border-2 border-foreground/10 bg-foreground/5 flex flex-col items-center justify-center gap-2 ${getInspectProps("box.cat").className}`}
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-red-500/20" />
-                            <div className="text-3xl relative z-10">🐈</div>
-                            <div className="flex flex-col items-center gap-0.5 relative z-10">
-                                <span className="text-[9px] font-mono font-bold uppercase text-red-500">SYSTEM_CAT</span>
-                                <div className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-red-500 text-white text-[8px] font-black uppercase shadow-sm">
-                                    <AlertTriangle className="w-2.5 h-2.5" /> NO_TOUCH
-                                </div>
-                            </div>
-                            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-muted rounded-full overflow-hidden opacity-30">
-                                <div className="h-full bg-red-500 w-[30%]" />
-                            </div>
+                            <div className="text-3xl">🐈</div>
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
+                                yellow car
+                            </span>
                         </div>
                     </div>
-
-                    <p
-                        {...getInspectProps("p.cat_disclaimer")}
-                        className={`text-[10px] text-muted-foreground font-mono italic ${getInspectProps("p.cat_disclaimer").className}`}
-                    >
-                        "and here is a cat, it is just existing here DO NOT TOUCH IT"
-                    </p>
                 </div>
             </main>
 

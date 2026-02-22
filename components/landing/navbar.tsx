@@ -60,10 +60,13 @@ export function Navbar() {
                         <span className="sr-only">GitHub</span>
                     </Link>
                     <Button
+                        asChild
                         size="sm"
                         className="h-9 px-4 rounded-none font-bold uppercase transition-all border border-primary bg-transparent text-primary hover:bg-primary hover:text-background"
                     >
-                        Install
+                        <Link href="/install">
+                            Install
+                        </Link>
                     </Button>
                 </nav>
             </div>

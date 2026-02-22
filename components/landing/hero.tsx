@@ -32,8 +32,8 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                            <Button asChild size="lg" className="h-12 px-8 rounded-none text-sm font-bold uppercase bg-primary text-background hover:opacity-90 transition-all">
-                                <Link href="https://github.com/szzd7223/dev-css-picker" target="_blank">
+                            <Button asChild size="lg" className="h-12 px-8 rounded-none text-sm font-bold uppercase bg-primary text-background hover:opacity-90 transition-all cursor-pointer">
+                                <Link href="/install">
                                     Get Started
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Link>
@@ -45,19 +45,7 @@ export function Hero() {
                             </Button>
                         </div>
 
-                        <div className="flex items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                            <span className="flex items-center gap-1.5"><Code2 className="h-3.5 w-3.5 text-primary" /> React Components</span>
-                            <span className="flex items-center gap-1.5">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Logo"
-                                    width={14}
-                                    height={14}
-                                    className="object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                                />
-                                CLI Integrated
-                            </span>
-                        </div>
+
                     </div>
 
                     <div className="relative max-w-[400px] mx-auto w-full lg:max-w-none">

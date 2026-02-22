@@ -38,11 +38,19 @@ export function Footer() {
                                 <Github className="h-5 w-5" />
                                 <span className="sr-only">GitHub</span>
                             </Link>
-                            <Link href="#" className="h-10 w-10 rounded-full border border-border/50 bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300">
+                            <Link
+                                href="https://x.com/ssaaaadd_sh"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="h-10 w-10 rounded-full border border-border/50 bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
+                            >
                                 <Twitter className="h-5 w-5" />
                                 <span className="sr-only">Twitter</span>
                             </Link>
-                            <Link href="#" className="h-10 w-10 rounded-full border border-border/50 bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300">
+                            <Link
+                                href="mailto:mohdsaadshaikh17@gmail.com?subject=Picky.Editor Inquiry"
+                                className="h-10 w-10 rounded-full border border-border/50 bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
+                            >
                                 <Mail className="h-5 w-5" />
                                 <span className="sr-only">Email</span>
                             </Link>
@@ -69,7 +77,7 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                                <Link href="/install" className="text-muted-foreground hover:text-primary text-sm transition-colors cursor-pointer">
                                     Chrome Web Store
                                 </Link>
                             </li>
@@ -91,7 +99,7 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                                <Link href="mailto:mohdsaadshaikh17@gmail.com?subject=Picky.Editor Inquiry" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                                     Contact Us
                                 </Link>
                             </li>
