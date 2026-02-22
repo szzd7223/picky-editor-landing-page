@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Github, Twitter, Mail, Target } from "lucide-react";
+import Image from "next/image";
+import { Github, Twitter, Mail } from "lucide-react";
 
 export function Footer() {
     return (
@@ -12,8 +13,14 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
                     {/* Brand Section */}
                     <div className="col-span-1 md:col-span-2 space-y-4 text-center md:text-left">
-                        <div className="flex items-center justify-center md:justify-start gap-2 text-xl font-bold tracking-tighter text-foreground">
-                            <Target className="h-6 w-6 text-primary" />
+                        <div className="flex items-center justify-center md:justify-start gap-3 text-xl font-bold tracking-tighter text-foreground">
+                            <Image
+                                src="/logo.png"
+                                alt="Picky.Editor Logo"
+                                width={32}
+                                height={32}
+                                className="object-contain"
+                            />
                             <span>
                                 Picky<span className="text-primary">.Editor</span>
                             </span>
@@ -22,7 +29,12 @@ export function Footer() {
                             The ultimate Chrome Extension for picking, inspecting, and editing CSS directly from your side panel. Make the web your playground!
                         </p>
                         <div className="flex items-center justify-center md:justify-start gap-4 pt-2">
-                            <Link href="#" className="h-10 w-10 rounded-full border border-border/50 bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300">
+                            <Link
+                                href="https://github.com/szzd7223/dev-css-picker"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="h-10 w-10 rounded-full border border-border/50 bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
+                            >
                                 <Github className="h-5 w-5" />
                                 <span className="sr-only">GitHub</span>
                             </Link>
@@ -42,13 +54,18 @@ export function Footer() {
                         <h4 className="font-bold text-sm tracking-widest uppercase text-foreground">Product</h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="#features" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                                <Link href="/#features" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                                     Features
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#how-it-works" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                                <Link href="/#how-it-works" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                                     How it Works
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/documentation" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                                    Documentation
                                 </Link>
                             </li>
                             <li>

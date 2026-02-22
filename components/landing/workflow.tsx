@@ -1,6 +1,6 @@
 export function Workflow() {
     return (
-        <section className="py-24 bg-background border-b border-border relative overflow-hidden">
+        <section id="how-it-works" className="py-24 bg-background border-b border-border relative overflow-hidden">
             {/* Background elements to match features */}
             <div className="absolute top-1/4 -right-20 w-72 h-72 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 

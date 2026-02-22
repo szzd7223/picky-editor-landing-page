@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Target, Sliders, ScanSearch, Image as ImageIcon, RotateCcw, PanelRight } from "lucide-react";
+import { Sliders, ScanSearch, Image as ImageIcon, RotateCcw, PanelRight } from "lucide-react";
 
 export function Features() {
     return (
@@ -12,7 +13,13 @@ export function Features() {
             <div className="container mx-auto px-4 md:px-8 relative z-10">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16 fade-in">
                     <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-2 shadow-[0_0_15px_rgba(var(--primary),0.1)]">
-                        <Target className="mr-2 h-4 w-4" />
+                        <Image
+                            src="/logo.png"
+                            alt="Logo"
+                            width={16}
+                            height={16}
+                            className="mr-2 object-contain"
+                        />
                         Next-Gen CSS Editing
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70">
@@ -28,7 +35,13 @@ export function Features() {
                     <Card className="rounded-xl border border-border/50 bg-background/50 backdrop-blur-sm hover:bg-background-offset/50 hover:border-primary/40 transition-all duration-500 group hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(255,255,255,0.03)] cursor-default">
                         <CardHeader className="space-y-4">
                             <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-500">
-                                <Target className="h-6 w-6 text-primary" />
+                                <Image
+                                    src="/logo.png"
+                                    alt="Logo"
+                                    width={24}
+                                    height={24}
+                                    className="object-contain"
+                                />
                             </div>
                             <CardTitle className="text-xl">Precision Element Picker</CardTitle>
                         </CardHeader>
